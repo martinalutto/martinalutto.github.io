@@ -5,13 +5,13 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --purple:       #5b8fc9;
-  --purple-dark:  #2e6fa8;
-  --purple-light: #eaf3fb;
-  --purple-mid:   #3d7cb8;
+  --purple:       #6080c0;
+  --purple-dark:  #6080c0;
+  --purple-light: #eaf0f8;
+  --purple-mid:   #4565b0;
   --text:         #2c2c2c;
   --muted:        #666;
-  --border:       #c8dff0;
+  --border:       #c8d8ec;
   --bg:           #ffffff;
 }
 
