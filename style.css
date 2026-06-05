@@ -1,18 +1,22 @@
+/* ── Google Fonts ── */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Lora:ital,wght@0,400;0,600;1,400&display=swap');
+
 /* ── Reset & base ── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --blue:      #4a90b8;
-  --blue-light: #e8f3fa;
-  --blue-mid:  #2e6e95;
-  --text:      #2c2c2c;
-  --muted:     #666;
-  --border:    #d0e6f2;
-  --bg:        #ffffff;
+  --purple:       #7c5cbf;
+  --purple-dark:  #5a3d96;
+  --purple-light: #f0ebf8;
+  --purple-mid:   #6b4da3;
+  --text:         #2c2c2c;
+  --muted:        #666;
+  --border:       #ddd5ef;
+  --bg:           #ffffff;
 }
 
 body {
-  font-family: 'Georgia', serif;
+  font-family: 'Lora', Georgia, serif;
   color: var(--text);
   background: var(--bg);
   line-height: 1.7;
@@ -21,12 +25,12 @@ body {
   flex-direction: column;
 }
 
-a { color: var(--blue-mid); text-decoration: none; }
+a { color: var(--purple-mid); text-decoration: none; }
 a:hover { text-decoration: underline; }
 
 /* ── Nav ── */
 header {
-  background: var(--blue-mid);
+  background: var(--purple-dark);
   padding: 0 2rem;
   position: sticky;
   top: 0;
@@ -45,8 +49,9 @@ nav {
 
 .nav-name {
   color: #fff;
-  font-size: 1.1rem;
-  font-weight: bold;
+  font-size: 1.05rem;
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
   letter-spacing: 0.02em;
 }
 
@@ -57,10 +62,10 @@ nav ul {
 }
 
 nav ul a {
-  color: #cde8f5;
-  font-family: 'Arial', sans-serif;
-  font-size: 0.92rem;
-  letter-spacing: 0.04em;
+  color: #ddd5ef;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   transition: color 0.2s;
 }
@@ -90,35 +95,55 @@ main {
 
 .about-photo img {
   width: 180px;
-  height: 220px;
+  height: 180px;
   object-fit: cover;
-  border-radius: 6px;
+  object-position: center top;
+  border-radius: 50%;
   border: 3px solid var(--border);
-  background: var(--blue-light);
+  background: var(--purple-light);
 }
 
+/* ── Round icon links ── */
 .about-links {
-  margin-top: 1rem;
+  margin-top: 1.2rem;
   display: flex;
   flex-direction: column;
-  gap: 0.4rem;
+  gap: 0.5rem;
+  align-items: center;
 }
 
 .about-links a {
-  font-family: 'Arial', sans-serif;
-  font-size: 0.85rem;
-  color: var(--blue-mid);
-  padding: 0.3rem 0.5rem;
-  border: 1px solid var(--border);
-  border-radius: 4px;
-  transition: background 0.2s;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.82rem;
+  color: var(--purple-dark);
+  padding: 0.45rem 1rem;
+  border: 1.5px solid var(--border);
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  width: 100%;
+  justify-content: center;
+  transition: background 0.2s, border-color 0.2s;
 }
 
-.about-links a:hover { background: var(--blue-light); text-decoration: none; }
+.about-links a:hover {
+  background: var(--purple-light);
+  border-color: var(--purple-mid);
+  text-decoration: none;
+}
+
+.about-links a svg {
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+  fill: var(--purple-dark);
+}
 
 .about-text h1 {
+  font-family: 'Lora', serif;
   font-size: 2rem;
-  color: var(--blue-mid);
+  color: var(--purple-dark);
   margin-bottom: 0.2rem;
 }
 
@@ -131,8 +156,10 @@ main {
 }
 
 .about-text h2 {
-  font-size: 1.15rem;
-  color: var(--blue-mid);
+  font-family: 'Inter', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--purple-dark);
   margin: 1.6rem 0 0.6rem;
   border-bottom: 1px solid var(--border);
   padding-bottom: 0.3rem;
@@ -149,16 +176,19 @@ main {
 
 /* ── Generic page ── */
 .page-content h1 {
+  font-family: 'Lora', serif;
   font-size: 1.8rem;
-  color: var(--blue-mid);
+  color: var(--purple-dark);
   margin-bottom: 1.5rem;
   border-bottom: 2px solid var(--border);
   padding-bottom: 0.5rem;
 }
 
 .page-content h2 {
-  font-size: 1.15rem;
-  color: var(--blue-mid);
+  font-family: 'Inter', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--purple-dark);
   margin: 2rem 0 0.6rem;
 }
 
@@ -170,17 +200,17 @@ main {
 .news-list li {
   display: flex;
   gap: 1.5rem;
-  padding: 0.9rem 0;
+  padding: 1rem 0;
   border-bottom: 1px solid var(--border);
   align-items: flex-start;
 }
 
 .news-date {
   flex: 0 0 110px;
-  font-family: 'Arial', sans-serif;
-  font-size: 0.82rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem;
   color: var(--muted);
-  padding-top: 0.15rem;
+  padding-top: 0.2rem;
 }
 
 .news-body { flex: 1; }
@@ -193,7 +223,7 @@ main {
   border-bottom: 1px solid var(--border);
 }
 
-.pub-title { font-weight: bold; color: var(--text); }
+.pub-title { font-weight: 600; color: var(--text); }
 
 .pub-authors {
   font-size: 0.9rem;
@@ -204,20 +234,20 @@ main {
 .pub-venue {
   font-size: 0.88rem;
   font-style: italic;
-  color: var(--blue-mid);
+  color: var(--purple-mid);
 }
 
 .pub-links { margin-top: 0.4rem; }
 
 .pub-links a {
-  font-family: 'Arial', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 0.8rem;
-  background: var(--blue-light);
+  background: var(--purple-light);
   border: 1px solid var(--border);
-  border-radius: 3px;
-  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+  padding: 0.15rem 0.7rem;
   margin-right: 0.4rem;
-  color: var(--blue-mid);
+  color: var(--purple-dark);
 }
 
 .pub-links a:hover { background: var(--border); text-decoration: none; }
@@ -226,10 +256,12 @@ main {
 .cv-section { margin-bottom: 2rem; }
 
 .cv-section h2 {
-  font-size: 1.1rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: var(--blue-mid);
+  letter-spacing: 0.08em;
+  color: var(--purple-dark);
   border-bottom: 1px solid var(--border);
   padding-bottom: 0.3rem;
   margin-bottom: 0.8rem;
@@ -238,19 +270,24 @@ main {
 .cv-row {
   display: flex;
   gap: 1.5rem;
-  margin-bottom: 0.7rem;
+  margin-bottom: 0.9rem;
 }
 
 .cv-year {
-  flex: 0 0 80px;
-  font-family: 'Arial', sans-serif;
-  font-size: 0.85rem;
+  flex: 0 0 90px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.82rem;
   color: var(--muted);
+  padding-top: 0.1rem;
 }
 
 .cv-detail strong { display: block; }
 
-.cv-detail span { font-size: 0.9rem; color: var(--muted); }
+.cv-detail span {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
 
 /* ── Contact ── */
 .contact-grid {
@@ -261,11 +298,13 @@ main {
 }
 
 .contact-block h2 {
-  font-size: 1rem;
-  color: var(--blue-mid);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--purple-dark);
   margin-bottom: 0.5rem;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.06em;
 }
 
 .contact-block p {
@@ -277,11 +316,11 @@ main {
 footer {
   text-align: center;
   padding: 1.2rem;
-  font-family: 'Arial', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 0.8rem;
   color: var(--muted);
   border-top: 1px solid var(--border);
-  background: var(--blue-light);
+  background: var(--purple-light);
 }
 
 /* ── Responsive ── */
