@@ -136,10 +136,17 @@ main {
 }
 
 .about-links a svg {
-  width: 15px;
-  height: 15px;
+  width: 30px;
+  height: 30px;
   flex-shrink: 0;
   fill: var(--purple-dark);
+}
+
+.about-links a img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  flex-shrink: 0;
 }
 
 .about-text h1 {
@@ -188,7 +195,7 @@ main {
 
 .page-content h2 {
   font-family: 'Inter', sans-serif;
-  font-size: 1.05rem;
+  font-size: 1.35rem;
   font-weight: 600;
   color: var(--purple-dark);
   margin: 2rem 0 0.6rem;
@@ -221,7 +228,7 @@ main {
 .pub-list { list-style: none; }
 
 .pub-list li {
-  padding: 1rem 0;
+  padding: 0.55rem 0;
   border-bottom: 1px solid var(--border);
 }
 
