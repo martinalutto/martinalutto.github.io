@@ -99,7 +99,7 @@ main {
   width: 240px;
   height: 240px;
   object-fit: cover;
-  object-position: center 68%;
+  object-position: center 85%;
   border-radius: 50%;
   border: 3px solid var(--border);
   background: var(--purple-light);
