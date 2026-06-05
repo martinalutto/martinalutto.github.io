@@ -5,13 +5,13 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --purple:       #7c5cbf;
-  --purple-dark:  #5a3d96;
-  --purple-light: #f0ebf8;
-  --purple-mid:   #6b4da3;
+  --purple:       #6e7fc4;
+  --purple-dark:  #4a5fa8;
+  --purple-light: #edf0f9;
+  --purple-mid:   #5568b0;
   --text:         #2c2c2c;
   --muted:        #666;
-  --border:       #ddd5ef;
+  --border:       #d4daf0;
   --bg:           #ffffff;
 }
 
@@ -94,8 +94,8 @@ main {
 }
 
 .about-photo img {
-  width: 180px;
-  height: 180px;
+  width: 210px;
+  height: 210px;
   object-fit: cover;
   object-position: center top;
   border-radius: 50%;
@@ -142,7 +142,7 @@ main {
 
 .about-text h1 {
   font-family: 'Lora', serif;
-  font-size: 2rem;
+  font-size: 2.3rem;
   color: var(--purple-dark);
   margin-bottom: 0.2rem;
 }
