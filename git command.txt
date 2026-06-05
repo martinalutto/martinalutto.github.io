@@ -1,0 +1,3 @@
+cd /Users/MARTINA/Desktop/website
+git add .
+git commit -m "update" && git push

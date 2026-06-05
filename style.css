@@ -225,7 +225,22 @@ main {
   border-bottom: 1px solid var(--border);
 }
 
-.pub-title { font-weight: 600; color: var(--text); }
+.pub-row {
+  display: flex;
+  gap: 1.2rem;
+  align-items: flex-start;
+}
+
+.pub-label {
+  flex: 0 0 38px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--purple-dark);
+  padding-top: 0.1rem;
+}
+
+.pub-title { font-style: italic; color: var(--text); }
 
 .pub-authors {
   font-size: 0.9rem;
